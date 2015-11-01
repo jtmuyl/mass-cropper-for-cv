@@ -1,3 +1,7 @@
+# (c) Jean-Thomas MUYL
+# jeanthomasmuyl@gmail.com
+# MIT License
+
 __author__ = 'jt'
 
 #This small tool sets up a json file that will help keep track of the progress

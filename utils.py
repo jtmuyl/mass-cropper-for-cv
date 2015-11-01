@@ -1,3 +1,7 @@
+# (c) Jean-Thomas MUYL
+# jeanthomasmuyl@gmail.com
+# MIT License
+
 __author__ = 'jt'
 import random
 

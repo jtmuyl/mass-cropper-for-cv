@@ -1,3 +1,12 @@
+# (c) Jean-Thomas MUYL
+# jeanthomasmuyl@gmail.com
+# MIT License
+#
+#
+# Part of this code (essentially the click_and_crop function) is Adrian Rosebrock work.
+# You can find the tutorial it's coming from there : http://www.pyimagesearch.com/2015/03/09/capturing-mouse-click-events-with-python-and-opencv/
+# If you're at all interested in Computer Vision and Python his blog is an abolute must-read.
+
 import cv2
 from utils import randomID
 
