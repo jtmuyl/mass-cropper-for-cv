@@ -49,7 +49,7 @@ def main():
     #outputString += "]}"
     outputString +="}"
     outputfile.write(outputString)
-    print "Init finished. %d files added to file %s" % (idNumber,options.filename)
+    print "Init finished. %d files added to file %s" % (idNumber - 1,options.filename)
 
 if __name__ == '__main__':
     main()
