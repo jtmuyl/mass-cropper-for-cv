@@ -17,7 +17,8 @@ This script comes with a resume function.
 To create this file you need to run the script createJson.py with two arguments : the data folder (-i) and the json file name (-o)
 
 ```Shell
-python createJson.py -i data/ -o progress.json```
+python createJson.py -i data/ -o progress.json
+```
 
 ### Running the script
 
