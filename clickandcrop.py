@@ -6,9 +6,11 @@
 # Part of this code (essentially the click_and_crop function) is Adrian Rosebrock work.
 # You can find the tutorial it's coming from there : http://www.pyimagesearch.com/2015/03/09/capturing-mouse-click-events-with-python-and-opencv/
 # If you're at all interested in Computer Vision and Python his blog is an abolute must-read.
+from __future__ import division
 
 import cv2
 from utils import randomID
+
 
 # initialize the list of reference points and boolean indicating
 # whether cropping is being performed or not
@@ -42,7 +44,17 @@ def cropper(imgfilename,prefix,inputfolder,outfolder,data):
     filepath = inputfolder + imgfilename
     image = cv2.imread(filepath)
     clone = image.copy()
-    cv2.namedWindow("image")
+
+    screen_res = 800, 600
+    scale_width = screen_res[0] / image.shape[1]
+    scale_height = screen_res[1] / image.shape[0]
+    scale = min(scale_width, scale_height)
+    window_width = int(image.shape[1] * scale)
+    window_height = int(image.shape[0] * scale)
+    cv2.namedWindow('image', cv2.WINDOW_NORMAL)
+    cv2.resizeWindow('image', window_width, window_height)
+
+    cv2.namedWindow("image",cv2.WINDOW_AUTOSIZE)
     cv2.setMouseCallback("image", click_and_crop)
     interrupt = False
     # keep looping until the 'q' key is pressed
